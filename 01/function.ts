@@ -1,3 +1,4 @@
+console.time();
 // Strategy type
 type NotificationStrategy = (to: string, message: string) => Promise<void>;
 
@@ -35,3 +36,5 @@ await notifier.notify("faizan@example.com", "Your booking is confirmed");
 // Later change to SMS
 notifier.setStrategy(smsStrategy);
 await notifier.notify("+91xxxx", "Your booking is confirmed");
+
+console.timeEnd();
