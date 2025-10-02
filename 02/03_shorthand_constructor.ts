@@ -2,7 +2,8 @@ class Student {
   constructor(
     public name: string, 
     private rollNo: number, 
-    readonly college: string
+    readonly college: string,
+    public capacity: number = 1
   ) {}
 
   details() {
